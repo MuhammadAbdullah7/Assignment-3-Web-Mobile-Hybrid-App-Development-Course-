@@ -153,6 +153,7 @@ header a{
     font-size: 15px;
     color: black;
 }
+
 #option ul li a.hov:hover{
     background-color: #316DC3;
     /* font-size: 15px; */
