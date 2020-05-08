@@ -104,6 +104,9 @@ header a{
     .carousel {
         z-index: -1;
     }
+    #introo{
+        font-size: 25px;
+    }
 
    
     #option ul li:hover .sub-menu-1 ul a{
