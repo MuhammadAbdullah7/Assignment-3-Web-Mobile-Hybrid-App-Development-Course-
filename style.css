@@ -1,0 +1,516 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    /* font-size: 15px; */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    /* background-color: gray; */
+}
+.noul{
+    text-decoration: none;
+}
+header{
+    background-color: #316DC3 !important;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    justify-content: space-evenly;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+header a{
+    color: #fff;
+}
+#million{
+    pointer-events: none;
+    /* font-family: 'Open Sans', sans-serif; */
+    text-align: center;
+    font-size: 14px;
+}
+#donate li{
+    padding: 2px;
+}
+#donate a{
+    color: #427900;
+    font-size: 11px;
+    background: #f5f5f5;
+    padding: 7px 9px;
+}
+#social-links li{
+    padding: 11px;
+}
+/*  */
+/* header nav responsive and media query */
+.checkbtn{
+    font-size: 30px;
+    color: royalblue;
+    float: right;
+    cursor: pointer;
+    display: none;
+  }
+#check{
+    display: none;
+  }
+@media screen and (max-width:965px){
+    header{
+        flex-direction: column;
+    }
+    #header1{
+        flex-direction: column;
+    }
+    #million{
+        margin-bottom: 12px;
+    }
+
+}
+@media screen and (max-width:775px){
+    .checkbtn{
+        display: block;
+        /* z-index: 1; */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    #option{
+        width: 100%;
+    }
+    #header1 ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        top: 64px;
+        left: -100%;
+        transition: all 1s;    
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #option ul li a.hov:hover{
+        width: 100%;
+        padding: 6px 100px;
+    }
+    .carousel {
+        z-index: -1;
+    }
+
+   
+    #option ul li:hover .sub-menu-1 ul a{
+        display: none;
+     }
+    
+}
+
+/* header nav responsive and media query */
+/*  */
+/* necha dusra header ha */
+#header1{
+    background-color: #f7f8fa !important;
+    display: flex;
+    align-items: center;
+    padding: 6px 0px;
+    justify-content: space-around;
+    position: sticky;  /* yar ye samajh nhi aya gugaad ha*/
+    top: 0px; /* yar ye samajh nhi aya gugaad ha*/
+    z-index: 1;
+}
+#header1 ul{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+#option ul{
+    /* padding: 10px;
+    margin: 5px; */
+    padding: 0px;
+    margin: 0px;
+}
+#option a{
+    text-decoration: none;
+    margin: 5px;
+    padding: 7px;
+}
+#option li{
+    padding: 7px;
+    margin: 0px;
+}
+#option ul li a.hov{
+    font-size: 15px;
+    color: black;
+}
+#option ul li a.hov:hover{
+    background-color: #316DC3;
+    /* font-size: 15px; */
+    /* border: 1px solid white; */
+    /* padding: 8px; */
+    color: #fff;
+    border-radius: 30px;
+    /* padding: 7px; */
+    /* margin: 0px; */
+    /* transition: 2000; */
+}
+.logo img{
+    max-height: 52px;
+}
+span{
+    text-align: center;
+}
+.marg{
+    margin-left: 3px;
+    font-size: 13px;
+}
+/* style home button */
+#pad{
+    /* padding: 0px 8px; */
+    color: #fff;
+}
+#active{
+    background-color: #316DC3;
+    font-size: 13px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+/* YAHA SAB DROPDOWN MENU1 KA KAAM KREGA */
+/* .dropdown-1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.dropdown-1 ul li{
+    display: none;
+    position: relative;
+}
+#option li:hover .dropdown-1 > li{
+    top: 0px;
+    display: block;
+}
+.dropdown-1 ul li:hover .dropdown-2 ul li{
+    display: block;
+}
+.dropdown-2 ul li{
+    display: none;
+}
+.dropdown-2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+} */
+
+.sub-menu-1{
+    display: none;
+}
+#option ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    margin-top: 8px;
+    margin-left: -20px;
+    /* z-index: 1; */
+}
+#option ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+    /* z-index: 1; */
+}
+#option ul li:hover .sub-menu-1 ul a{
+   color: black; 
+}
+/* ye carasoral ka code */
+/* .carousel{
+    z-index: -1;
+} */
+/* necha marquee karoga phela */
+#marquee .marq{
+    max-width: 76%;
+    background-color: #316DC3;
+    margin: 8px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    /* line-height: 25px; */
+    color: white;
+}
+
+/* necha introduction and para ka hoskte */
+#intro{
+    background-color: #f7f8fa !important;
+}
+#intro-sec{
+    background-color: #f7f8fa !important;
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+}
+.intro-div{ 
+    max-width: 63%;
+    margin: 3px auto;
+    padding: 50px 8px 28px 8px;
+    /* background-color: wheat; */
+}
+#introo{
+    color: #316DC3 !important;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    /* margin: 10px auto; */
+}
+#duction{
+    color: #427900 !important;
+}
+/* necha image ka lia */
+#img-div{
+    /* margin: 0 auto;
+    max-width: 10%;
+    position: relative; */
+    text-align: center;
+}
+#img-div img{
+    height: 40px;
+    margin-bottom: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#img-div span{
+    font-size: 19px;
+    font-weight: bolder;
+    color: #427900;
+}
+/* necha paragraph ka lia kra ha */
+#para-div p{
+    text-align: justify;
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* necha uthaya howa counter bar ka css code ha */
+.funfact{
+    transition: all 0.5s ease;
+  }
+/* yaha pa chapa howa counter end ha kuch krta nhi ha ye wesa!! */
+/* necha ma ab service ka jo bhi kaam ha uski css karo ga */
+
+.col-xs-12 .col-sm-6 .col-md-4 .col-lg-4{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.sadqa-div{
+    margin-bottom: 30px !important;
+    padding: 30px !important;
+    background-color: #fff !important;
+    box-shadow: 0px 10px 20px 6px rgba(0, 0, 0, 0.16);
+    text-align: center;
+
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.all-service-anch{
+    color: #808080;
+    text-decoration: none;
+    background-color: transparent;
+}
+.all-service-anch img{
+    width: 70px;
+}
+.sadqa-div .heading-h4{
+    margin-top: 20px !important;
+    font-weight: 600 !important;
+    font-family: 'Merriweather', serif;
+    color: #316DC3;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* necha mission and upcoming ka css ha */
+.bottom-line-h3{
+    margin-top: 0px !important;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #316DC3;
+}
+#mission-upcoming .mt-20{
+    margin-top: 0px !important;
+}
+.miss-pad-div{
+    margin-bottom: 20px !important;
+    padding: 15px !important;
+    border: 1px solid #eeeeee !important;
+    background-color: #f7f8fa !important;
+}
+.miss-pad-div a{
+    padding: 0px;
+    margin-right: 30px;
+    line-height: 2;
+}
+.miss-h4{
+    display: inline;
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #316DC3;
+}
+/* nacha gallery ka ha code */
+#intro-sec-gallery{
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.wrapper img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.pad-0{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/* yaha pa gallery pa hover ka code ha */
+.wrapper{
+    margin-bottom: 3px;
+}
+.wrapper .content{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: gray;
+    text-transform: uppercase;
+    /* font-size: 28px; */
+}
+.wrapper .overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border: 8px solid rgba(180, 180, 172, 0.305);
+    transition: .5s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+.wrapper:hover .overlay{
+    opacity: 1;
+    color: rgba(175, 172, 172, 0.705);
+}
+/* galley pa hover ka icons  */
+.gal-icon-div {
+    display: inline-block;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 18px;
+    background-color: royalblue;
+}
+.gal-icon-div a > i{
+    color: #fff;
+}
+.gal-icon-div a:hover{
+    opacity: 0.5;
+}
+
+/* necha last footer ka code ha*/
+#footer-bottom2{
+    background-color: #316DD9 !important;
+}
+#footer-bottom2 p{
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+#footer-bottom2 .pd-top{
+    padding-top: 15px !important;
+    padding-bottom: 10px !important;
+}
+/* necha 2nd last main footer ka lia ha */
+#bottom-footer1{
+    background-color: rgb(37, 39, 46) !important;
+}
+#bottom-footer1 .pt-pb{
+    padding-bottom: 25px !important;
+    padding-top: 40px !important;
+}
+#bottom-footer1 .text-color{
+    color: #bbb;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+}
+#bottom-footer1 .mb-width{
+    margin-bottom: 12px !important;
+    max-width: 80%;
+}
+#bottom-footer1 .contact-ul{
+    margin-left: -20px;
+    list-style: none;
+}
+#bottom-footer1 .contact-ul li{
+    margin-bottom: 6px;
+}
+#bottom-footer1 .contact-ul li > i{
+    color: #427900 !important;
+    margin-right: 3px;
+}
+/* necha 2nd column of footer ka code ha */
+#bottom-footer1 .text-color-col2 h5{
+    color: #fff;
+    font-size: 14px !important;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    border-bottom: 5px solid #444;
+    padding-bottom: 11px;
+    padding-top: 6px;
+}
+/* #bottom-footer1 .text-color-col2 h5::after{
+    background-color: #427900;
+    bottom: 336px;
+    content: "";
+    height: 2px;
+    left: 15px;
+    position: absolute;
+    width: 60px;
+} */
+/* necha 3rd column ha */
+#bottom-footer1 .text-color-col3 h5{
+    color: #fff;
+    font-size: 14px !important;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    padding-bottom: 8px;
+    padding-top: 4px;
+}
+.text-color-col3 .social-ico{
+    margin-left: -38px;
+}
+.text-color-col3 .social-ico li{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    border-radius: 17px;
+    padding: 5px;
+    background-color: royalblue;
+}
+.text-color-col3 .social-ico li > a{
+    color: #fff;
+}
