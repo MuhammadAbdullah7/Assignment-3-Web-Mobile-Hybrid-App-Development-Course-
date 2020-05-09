@@ -105,7 +105,10 @@ header a{
         z-index: -1;
     }
     #introo{
-        font-size: 25px;
+        font-size: 25px !important;
+    }
+    .intro-div {
+    max-width: 100% !important;
     }
 
    
