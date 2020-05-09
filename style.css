@@ -107,6 +107,10 @@ header a{
     #introo{
         font-size: 25px !important;
     }
+    
+    .intro-div {
+    max-width: 100% !important;
+    }
 
    
     #option ul li:hover .sub-menu-1 ul a{
